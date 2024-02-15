@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "571cc6a0-c784-4983-b0a0-b0978ec82d49",
+		"name": "Product_Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31167248"
+	},
+	"item": [
+		{
+			"name": "Create productDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n        \"name\": \"Iphone\",\r\n        \"productDescription\": \"A lightning‑fast chip. A leap in battery life. And all‑new photo and video capabilities. iPhone lets you do things you never could before — in two great sizes.\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/product/prod",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"product",
+						"prod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductdetailsbyprodid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/product/prod/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"product",
+						"prod",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateOrderDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\":\"0001\", \r\n      \"orderAddress\":\"Italy\",\r\n       \"productName\": [\r\n        {\r\n            \"name\" : \"Samsung\",\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"productId\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/pro/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"pro",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreteOrderdetails2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\":\"0002\", \r\n      \"orderAddress\":\"France\",\r\n       \"productName\": [\r\n        {\r\n            \"name\" : \"Iphone\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"productId\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/pro/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"pro",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getallorders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getorderdetailsbyorderid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/orders/orderid/0001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"orders",
+						"orderid",
+						"0001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateproddetailswithorderId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"productName\": [\r\n        {\r\n            \"name\" : \"IPhone\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n        \"productId\": 1,\r\n        \"productDescription\": \"A lightning‑fast chip. A leap in battery life. And all‑new photo and video capabilities. iPhone lets you do things you never could before — in two great sizes.\",\r\n        \"orderId\" : \"0002\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/product/prodorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"product",
+						"prodorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateproddetailswithorderId2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"productName\": [\r\n        {\r\n            \"name\" : \"Samsung\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n        \"productId\": 1,\r\n        \"productDescription\": \"SmartPhone\",\r\n        \"orderId\" : \"0001\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/product/prodorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"product",
+						"prodorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getproductdetailsbyorderid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/0001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"0001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creetrepdetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"representativeId\":1,\r\n    \"representativeName\":\"Amit\",\r\n    \"orderId\": [\"0001\", \"0002\", \"0003\"]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/rep/createrep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"rep",
+						"createrep"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creeterepdetails2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"representativeId\":2,\r\n    \"representativeName\":\"Maria\",\r\n    \"orderId\": [\"0004\", \"0005\", \"0006\"]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/rep/createrep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"rep",
+						"createrep"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getallrepdetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/representatives",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"representatives"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateOrderwithrepId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\":\"0001\", \r\n      \"orderAddress\":\"Italy\",\r\n      \"representId\":1,\r\n       \"productName\": [\r\n        {\r\n            \"name\" : \"Samsung\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"productId\":2,\r\n    \"customerName\":\"Berti\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/orderrep/createorderwithrep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"orderrep",
+						"createorderwithrep"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreteorderwithrepId2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\":\"0002\", \r\n      \"orderAddress\":\"France\",\r\n      \"representId\":2,\r\n       \"productName\": [\r\n        {\r\n            \"name\" : \"Iphone\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"productId\":1,\r\n    \"customerName\":\"Berti\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/orderrep/createorderwithrep",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"orderrep",
+						"createorderwithrep"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderbyrepId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/order/representId/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"order",
+						"representId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateproductOrderdetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\":\"0002\", \r\n    \"productName\": [\r\n        {\r\n            \"name\" : \"Iphone\",\r\n            \"quantity\": 2\r\n        }\r\n    ],\r\n    \"customerName\": \"Mara\",\r\n    \"customerAddress\":\"eeee\",\r\n    \"productDescription\": \"A lightning‑fast chip. A leap in battery life. And all‑new photo and video capabilities. iPhone lets you do things you never could before — in two great sizes.\",\r\n    \"productId\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customer_orders/producto/productorder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders",
+						"producto",
+						"productorder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetallproductOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customer_orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customer_orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
